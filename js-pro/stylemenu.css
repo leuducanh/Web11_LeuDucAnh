@@ -1,0 +1,35 @@
+.menu{
+    background-color: pink;
+    text-align: center;
+}
+span{
+    /* biến inline thường thành inline nhưng các phần tử theo kiểu block */
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+}
+span:hover{
+    color: white;
+    background: rgb(47, 255, 134);
+}
+
+
+.menuverti{
+   
+    position: absolute;
+    background-color: pink;
+    /* sẽ luôn chiếm chọn 1 dòng, phần thuộc về item chỉ có border, padding,content còn margin sẽ thuộc về cha ngoài */
+}
+
+.menuverti span:hover{
+    color: white;
+    background: rgb(47, 255, 134);
+}
+
+.span:hover .menuverti span{
+ 
+}
