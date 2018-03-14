@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid red;
+}
+
+p.first {
+    background: #f3f3cf;
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+p.second {
+    background: #e0e0fc;
+    height: 100px;
+    width: 150px;
+}

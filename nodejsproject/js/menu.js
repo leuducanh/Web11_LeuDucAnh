@@ -1,0 +1,11 @@
+ $(document).ready(function(){
+    $("#frontendpractice").click(()=>{
+        window.open('http://localhost:6972/frontendpractice');
+    });
+    $("#flexbox").click(()=>{
+        window.open('http://localhost:6972/flexbox');
+    });
+    $("#index").click(()=>{
+        window.open('http://localhost:6972/');
+    });
+});
