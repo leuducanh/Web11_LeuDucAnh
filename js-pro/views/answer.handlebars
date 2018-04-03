@@ -1,0 +1,11 @@
+<p>{{question.questionContent}}</p>
+<button onclick="yesListener">Yes</button>
+<button onclick="noListener">No</button>
+<script>
+    function yesListener(){
+        window.open('http://localhost:6969/question/' + {{question.id}} + '/1');
+    }
+    function noListener(){
+        window.open('http://localhost:6969/question/' + {{question.id}} + '/0');
+    }
+</script>

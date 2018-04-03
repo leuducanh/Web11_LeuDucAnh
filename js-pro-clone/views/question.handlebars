@@ -1,0 +1,17 @@
+<h1 class="text-center">{{question.content}}</h1>
+
+<h3 class="text-center">{{totalVotes}} vote</h3>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" style="width: {{percentYes}}%">
+        <span class="glyphicon glyphicon-thumbs-up"></span>{{percentYes}}%
+    </div>
+    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: {{percentNo}}%">
+        <span class="glyphicon glyphicon-thumbs-down"></span>{{percentNo}}%
+    </div>
+
+</div>
+
+<div class="text-center">
+    <a id="btnOtherQuestion" class="btn btn-success" href="/">xem cau hoi khac</a>
+</div>
+

@@ -1,24 +1,23 @@
 const fs = require('fs');
 
 let readFile = (path,onReadFileDone)=>{
-     fs.readFileSync(path,'utf-8',(err,data)=>{
+    fs.readFileSync(path,'utf-8',(err,data)=>{
          if(err) {
              console.log(err)
          }
          onReadFileDone(data);
-     });
-};
-
-let writeFile = (path,writeData,onWriteDataSuccess)=>{
-    fs.writeFile(path,writeData,'utf-8',(err)=>{
-        if(err){
-            console.log(err); 
-        }
-        onWriteDataSuccess('Success!');
     });
 };
 
+let readFileSync = (path)=>{
+    return JSON.parse(fs.readFileSync(path,'utf-8'));
+}
+
+let writeFile = (path,writeData,onWriteFileDone)=>{
+    fs.writeFile(path,JSON.stringify(writeData),'utf-8',onWriteFileDone);
+};
+
 module.exports = {
-    readFileFunc : readFile,
-    writeData
+    readFileSync,
+    writeFile
 }

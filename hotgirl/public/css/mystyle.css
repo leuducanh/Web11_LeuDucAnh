@@ -1,0 +1,21 @@
+.cell{
+    padding : 5px;
+}
+.small-cell{
+    height: 200px;
+    background: #000;
+}
+.big-cell{
+    height: 300px;
+    background: #000;
+}
+
+.big-image{
+    height: 80%;
+    width: 100%;
+}
+
+.small-image{
+    height: 60%;
+    width: 100%;
+}

@@ -1,23 +1,23 @@
-var print = (callback)=>{
-    console.log("abcd");
+// var print = (callback)=>{
+//     console.log("abcd");
 
-    var timeout = 1000;
+//     var timeout = 1000;
 
-    setTimeout(() => {
-        console.log("dep trai vl");
-        callback();
-    }, timeout);
-}
+//     setTimeout(() => {
+//         console.log("dep trai vl");
+//         callback();
+//     }, timeout);
+// }
 
-var callbackFun=()=>{
-    console.log("end");
-}
+// var callbackFun=()=>{
+//     console.log("end");
+// }
 
-console.log("start!")
-print(callbackFun);
-console.log("finish!")
-var a=5;
-var a=6;
+// console.log("start!")
+// print(callbackFun);
+// console.log("finish!")
+// var a=5;
+// var a=6;
 // console.log(a,b);
 
 // var arr=[];
@@ -47,18 +47,22 @@ var a=6;
 // countDown(5);
 
 
-function sort(a) {
-    for( var i =0;i < a.length-1;i++){
-        for(var j = i+1;j < a.length;j++){
-            if(a[j] < a[i]){
-                var swap = a[i];
-            a[i] = a[j];
-            a[j] = swap;
-            }
-        }
-    }
-}
+// function sort(a) {
+//     for( var i =0;i < a.length-1;i++){
+//         for(var j = i+1;j < a.length;j++){
+//             if(a[j] < a[i]){
+//                 var swap = a[i];
+//             a[i] = a[j];
+//             a[j] = swap;
+//             }
+//         }
+//     }
+// }
 
-var a= [3,2,1];
-sort(a);
-console.log(a[0] + " " + a[1]);
+// var a= [3,2,1];
+// sort(a);
+// console.log(a[0] + " " + a[1]);
+
+const fs = require('fs');
+var data = JSON.parse(fs.readFileSync('./data.json','utf-8'))
+console.log(data);
