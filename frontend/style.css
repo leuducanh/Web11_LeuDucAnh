@@ -1,0 +1,13 @@
+.column_left{
+    background: blueviolet;
+    float: left;
+}
+
+.column_right{
+    background: blanchedalmond;
+    float: right;
+}
+
+.column_center{
+    background: aqua;
+}

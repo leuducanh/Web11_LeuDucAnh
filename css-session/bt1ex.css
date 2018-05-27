@@ -1,0 +1,18 @@
+.column_left{
+    float: left;
+    width: 200px;
+    height: 700px;
+    background: royalblue;
+}
+.column_center{
+    background: rosybrown;
+}
+.column_right{
+    float: right;
+    width: 200px;
+    height: 700px;
+    background: royalblue;
+}
+.column{
+    padding: 10px;
+}

@@ -1,0 +1,120 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 201326592 bytes for Failed to commit area from 0x00000000c0000000 to 0x00000000cc000000 of length 201326592.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3331), pid=248324, tid=0x000000000003a2fc
+#
+# JRE version:  (8.0_131-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000468e000):  JavaThread "Unknown thread" [_thread_in_vm, id=238332, stack(0x0000000004690000,0x0000000004790000)]
+
+Stack: [0x0000000004690000,0x0000000004790000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000468e000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=238332, stack(0x0000000004690000,0x0000000004790000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000004790ad0] Heap_lock - owner thread: 0x000000000468e000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7868e0000 - 0x00007ff786917000 	C:\Program Files\Java\jdk1.8.0_131\bin\java.exe
+0x00007ffb5cfd0000 - 0x00007ffb5d1b0000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb5c510000 - 0x00007ffb5c5be000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb596f0000 - 0x00007ffb59956000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb5bbf0000 - 0x00007ffb5bc91000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb5bca0000 - 0x00007ffb5bd3d000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb5c8c0000 - 0x00007ffb5c91b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb5bad0000 - 0x00007ffb5bbef000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb5c5c0000 - 0x00007ffb5c74f000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb5a150000 - 0x00007ffb5a170000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb5c080000 - 0x00007ffb5c0a8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb59550000 - 0x00007ffb596e3000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb5a0b0000 - 0x00007ffb5a14b000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb5a170000 - 0x00007ffb5a266000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb47620000 - 0x00007ffb47889000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.16299.309_none_15cfd4c4935e6b11\COMCTL32.dll
+0x00007ffb5bd40000 - 0x00007ffb5c048000 	C:\WINDOWS\System32\combase.dll
+0x00007ffb593d0000 - 0x00007ffb59442000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb5c050000 - 0x00007ffb5c07d000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006ff00000 - 0x000000006ffd2000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\msvcr100.dll
+0x000000006f660000 - 0x000000006fefc000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\server\jvm.dll
+0x00007ffb5c0b0000 - 0x00007ffb5c0b8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffb42440000 - 0x00007ffb42449000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffb4db70000 - 0x00007ffb4db93000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb5c920000 - 0x00007ffb5c98c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb4cdf0000 - 0x00007ffb4ce1a000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffb59450000 - 0x00007ffb5949a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffb4e300000 - 0x00007ffb4e30a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x000000006f650000 - 0x000000006f65f000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\verify.dll
+0x000000006f620000 - 0x000000006f649000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\java.dll
+0x000000006f600000 - 0x000000006f616000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Xverify:none -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication 
+java_command: C:\Users\MyPC\.vscode\extensions\redhat.java-0.21.0\server\plugins\org.eclipse.equinox.launcher_1.5.0.v20180207-1446.jar -configuration C:\Users\MyPC\.vscode\extensions\redhat.java-0.21.0\server\config_win -data C:\Users\MyPC\AppData\Roaming\Code\User\workspaceStorage\af966c343a49915e864fc3f7033cbcf1\redhat.java\jdt_ws
+java_class_path (initial): C:\Users\MyPC\.vscode\extensions\redhat.java-0.21.0\server\plugins\org.eclipse.equinox.launcher_1.5.0.v20180207-1446.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_131
+PATH=C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\MyPC\AppData\Local\Programs\Python\Python36;C:\Users\MyPC\AppData\Local\Programs\Python\Python36\Scripts;C:\Program Files\Sublime Text 3;C:\Users\MyPC\AppData\Roaming\Sublime Text 3\Packages\SublimeLinter;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\VTEC Anti-Porn Utilities;C:\Java\apache-maven-3.5.2\bin;C:\Program Files\nodejs\;C:\Users\MyPC\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\MyPC\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin
+USERNAME=MyPC
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 16299 (10.0.16299.15)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 12457376k(737632k free), swap 26938668k(140676k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for windows-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:53 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Mar 25 18:03:29 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

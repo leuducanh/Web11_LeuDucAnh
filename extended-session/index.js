@@ -1,18 +1,14 @@
 $(document).ready(() => {
     listenToFormSubmitEvent()
-    listenToInputEvent()
 })
-
-const listenToInputEvent = ()=>{
-    
-}
 
 const listenToFormSubmitEvent = () => {
     const formElement = $(".article-search-form");
     formElement.on("submit", async event => {
         event.preventDefault()
-        var searchText = $('.article-search-form__input').val();
-
+        $("div.article-list").empty();
+        const searchQuery = getUserSearchQuery();
+        
         var search = ()=>{ return $.ajax({
             url:'https://en.wikipedia.org/w/api.php',
             type:'POST',
@@ -22,7 +18,7 @@ const listenToFormSubmitEvent = () => {
                 format: "json",
                 srprop: "snippet",
                 origin: "*",
-                srsearch: encodeURI(searchText)
+                srsearch: encodeURI(searchQuery)
             },
             // success:function(res){
             //     return res;   
@@ -32,18 +28,16 @@ const listenToFormSubmitEvent = () => {
         const data = await search();
         $('.article-search-form__input').html("")
 
-        var doms = "";
-        for(let i = 0;i < data.query.search.length;i++){
-            console.log("abc" + i);
-            doms += `<a href="https://en.wikipedia.org/?curid=${data.query.search[i].pageid}" target="_blank"
+        const doms = data.query.search.map((element)=>{
+           return `<a href="https://en.wikipedia.org/?curid=${element.pageid}" target="_blank"
             class="article-view">
-            <h3 className="article-view__title">${data.query.search[i].title}</h3>
-            <p className="article-view__snippet">${data.query.search[i].snippet}</p>
-            </a>`;
-        }
+            <h3 className="article-view__title">${element.title}</h3>
+            <p className="article-view__snippet">${element.snippet}</p>
+            </a>`
+        }).join("");
 
-        $(".article-list").html(doms);
-
+        $(".article-list").append(doms);
+        
         /**
          * TODO:
          *  - Lấy từ khoá search của người dùng
@@ -54,3 +48,8 @@ const listenToFormSubmitEvent = () => {
 
     })
 }
+    function getUserSearchQuery(){
+        const inputElement = $("#article-search-form__input");
+        const  searchQuery = inputElement.val();
+        return searchQuery;
+    }

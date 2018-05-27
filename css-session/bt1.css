@@ -1,0 +1,26 @@
+#container{
+    display: flex;
+    flex-direction: row
+}
+#param1{
+    background: burlywood;
+}
+#param2{
+    background: cadetblue;
+}
+.ad1{
+    height: 700px;
+    width: 200px;
+    display:inline-block;
+    background: aqua;
+}
+.ad2{
+    height: 800px;
+    width: 200px;
+    display:inline-block;
+    background: blue;
+}
+.content{
+    width: 100%;
+    display:inline-block;
+}
